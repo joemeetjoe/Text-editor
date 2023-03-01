@@ -31,17 +31,20 @@ module.exports = () => {
         background_color: '#225ca3',
         theme_color: '#225ca3',
         orientation: 'portrait',
-        crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+        // crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('./src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+            sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+            destination: path.join('assets', 'icons')
           },
         ]
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'service-worker.js',
+        swDest: 'src-sw.js',
       }), 
     ],
     module: {
