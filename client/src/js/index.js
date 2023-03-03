@@ -2,6 +2,8 @@ import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
+import Icon from '../images/logo.png'
+import _ from 'lodash';
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
@@ -31,3 +33,6 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
+
+let iconImgTag = document.getElementById('logo');
+iconImgTag.src = Icon;

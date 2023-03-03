@@ -191,6 +191,9 @@ h1 {
 .btn.btn-link:hover {
   background-color: #31a9e1;
 }
+#logo{
+  height: 100px;
+}
 
 @media only screen and (max-width: 600px) {
   .nav-btn {
